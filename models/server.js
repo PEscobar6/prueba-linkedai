@@ -7,7 +7,7 @@ class Server{
         this.port   = process.env.PORT;
 
         // Path
-        this.usersPath = '/api/users'
+        this.testPath = '/api/test'
 
         //Middlewares
         this.middlewares();
@@ -29,7 +29,7 @@ class Server{
     }
 
     routes() {
-        this.app.use(this.usersPath, require('../routes/user'));
+        this.app.use(this.testPath, require('../routes/board'));
     }
 
     listen() {
